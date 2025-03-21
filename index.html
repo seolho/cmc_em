@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>📝CMC 응급병동 휴가 신청하기</title>
+    <style>
+        body {
+            max-width: 900px;
+            margin: 5px;
+            padding: 10px;
+        }
+        .center {
+            display: flex;
+            text-align: center;
+        }
+        iframe {
+            border-radius: 10px;
+        }
+        a {
+            font-size: medium;
+            font-weight: 600;
+        }
+        #detail, #close {
+            display: none;
+        }
+        button {
+            font-size: 15px;
+            margin-top: 10px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            margin-right: 10px;
+            box-shadow: 0px 3px 6px grey;
+        }
+        #icon {
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+  background: none;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+#icon_call {
+  border: none;
+  width: 250px;
+  height: 55px;
+  padding-top: 12px;
+  font-size: 20px;
+  color: black;
+  border-radius: 35px;
+  box-shadow: 1px 3px 3px 1px slategray;
+  background: rgb(205, 235, 223);
+  text-align: center;
+  font-weight: bold;
+}
+#icon_call a {
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.space_around {
+          display: flex;
+          justify-content: space-around;
+        }
+        #docu, #cancel {
+          display: none;
+          font-size: 15px;
+        }
+        #close {
+          font-weight: 600;
+        }
+        p {
+          border: solid 1px;
+          box-shadow: opx 2x 4px grey;
+          padding: 10px;
+          border-radius: 5px;
+        }
+        #loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 배경 색상과 투명도를 조정하세요 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#loading-message {
+  font-size: 24px;
+  color: white;
+}
+#loading-spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    </style>
+</head>
+<body>
+   <!--  <button id="open" class="btn btn-primary" onclick="opendocu()" style="margin-left: 15px;">🚀휴가신청 유의사항 보기↓ </button>
+    <div id="docu">
+        <p>
+         <b>📢휴가신청시 유의사항</b><br><br>
+         
+         아래 내용을 유의하여 휴가신청서를 제출해 주시기 바랍니다<br><br>
+         
+         1. 신청기간: 매월1일~20일 차기월 및 차차기월 휴가신청<br><br>
+         
+         2. 휴가신청은 동일날짜에 한해 최대 7명까지 신청하실 수 있습니다.<br><br>
+         
+         3. 사원번호를 조회하여 이름을 확인하여 주세요(조회불가시 파트장에게 보고)<br><br>
+         
+         4. 신청된 휴가의 변경은 별도로 신청하시기 바랍니다.<br>
+             (매월 10일전까지 차기월 휴가신청 변경가능)<br>
+         </p></div>
+         <div class="center">
+         <button id="close" class="btn btn-danger" onclick="closedocu()">✔확인 하였습니다(닫기) </button>
+          <small id="cancel" style="margin-top: 15px; margin-left:10px;" onclick="alert('📧이메일로 파트장에게 문의 합니다')"><a href="mailto:hppyiris522@naver.com?subject=문의 드립니다..">📧파트장에게 문의하기→</a></small>
+       </div> -->
+    <iframe src="https://script.google.com/macros/s/AKfycbzly8wSOe6VXNUehYRyCY8kOsBlve3Awfgi0hLAnyACT9mkiWjN-VQiNtOz0lIFP9_K9A/exec" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>
+   <!--<a href="https://docs.google.com/spreadsheets/d/1JMPRVw-hIARNFGgUXzbj4Nx7x4nJGarUoQiqaoR84UM/edit#gid=0" target="_blank" onclick="alert('📢신청내역을 확인하실수 있습니다')">🔎가입신청내역 보기→</a>
+   -->
+   
+  
+  <br>
+  <!-- <a href="https://docs.google.com/spreadsheets/d/1buSYJ_KA3msWr5MYYP0BKucYEE4h4ryF-x2V1BjFlDo/edit?usp=sharing">🔎제출내역보기→</span></a> -->
+    <!-- <button onclick="location.reload()" style="background-color: antiquewhite;">↩다시작성하기</button>
+  <br> --><br><br>
+  <!-- <div class="space_around">
+  <div onclick="callon()" id="icon_call">
+    📞파트장에게 문의하기
+    </div>
+</div> -->
+<div id="loading-overlay">
+  <div id="loading-spinner"></div>
+  <div id="loading-message"><span style="padding-left: 15px;">로딩중입니다...</span>
+    <br><small>✨CMC응급병동 휴가신청</small>
+  </div>
+</div>
+<script>
+// 페이지 로딩이 완료되면 로딩 스피너를 숨깁니다.
+window.addEventListener('load', function() {
+  var spinner = document.getElementById('loading-spinner');
+  spinner.style.display = 'none';
+});
+</script>
+<script>
+window.addEventListener('load', function() {
+  var loadingOverlay = document.getElementById('loading-overlay');
+  loadingOverlay.style.display = 'none';
+});
+  </script>
+<script>  
+    function callon() {
+      if (window.confirm("☏ 이주성파트장에게 📞전화앱으로 연결할까요?")) {
+        document.location.href = "tel:010-8013-6639"
+    } else {
+      alert("취소 되었습니다!!")
+    }
+   }                
+  </script>
+    <script>
+      function opendocu() {
+        document.getElementById("open").style.display='none';
+        document.getElementById("close").style.display='block';
+        document.getElementById("docu").style.display='block';
+        document.getElementById("cancel").style.display='block';
+        smoothScrollToBottom(1000); // 1초 동안 천천히 스크롤 내리기
+        }
+        
+        function smoothScrollToBottom(duration) {
+            var start = window.scrollY || window.pageYOffset;
+            var distance = document.body.scrollHeight - start;
+            var startTime = Date.now();
+        
+            function animate() {
+                var elapsed = Date.now() - startTime;
+                var progress = elapsed / duration; // 0 to 1
+                var ease = progress < 0.5 ? 2 * progress * progress : (4 - 2 * progress) * progress - 1; // ease in out
+        
+                if (progress < 1) {
+                    window.scrollTo(0, start + distance * ease);
+                    requestAnimationFrame(animate);
+                } else {
+                    window.scrollTo(0, document.body.scrollHeight);
+                }
+            }
+        
+            animate();
+        }  
+      function closedocu() {
+        document.getElementById("open").style.display='block';
+        document.getElementById("close").style.display='none';
+        document.getElementById("docu").style.display='none';
+        document.getElementById("cancel").style.display='none';
+      }
+    </script>
+</bodyonload=>
+</html>
